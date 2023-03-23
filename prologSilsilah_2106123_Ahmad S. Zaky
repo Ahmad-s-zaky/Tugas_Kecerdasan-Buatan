@@ -22,13 +22,3 @@ is_anak(Y,X) :- ayah(X,Y) | ibu(X,Y).
 is_sodara(Y,Z) :- ayah(X,Y), ayah(X,Z) | ibu(X,Y), ibu(X,Z).
 is_kakek(X,Z) :- ayah(X,Y), is_ayah(Y,Z).
 is_nenek(X,Z) :- ibu(X,Y), is_ibu(Y,Z).
-
-------------------------------------------------------------------------------------------
-Cek:
-ayah(david,Y).          ==> liza, john, susan
-ibu(amy,Y).             ==> liza, john, susan
-is_anak(ray,jack).      ==> true
-is_sodara(liza,john).   ==> true
-is_kakek(david,peter).  ==> true
-is_nenek(amy,mary).     ==> true
--------------------------------------------------------------------------------------------
